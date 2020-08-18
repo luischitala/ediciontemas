@@ -4361,7 +4361,7 @@ p > object:only-child {
 	}
 }
 /* Custome CSS */
-.desarrollo {
+.desarrollo, .category-desarrollo {
 	background: url('http://image.flaticon.com/icons/png/128/59/59919.png') no-repeat top right;
 	
 }
