@@ -10,16 +10,15 @@
 
 do_action( 'storefront_loop_before' );
 
-while ( have_posts() ) :
-	the_post();
+while ( have_posts() ) : the_post();
 
 	/**
 	 * Include the Post-Format-specific template for the content.
 	 * If you want to override this in a child theme, then include a file
 	 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 	 */
-	if in_category('desarrollo', null) {
-		get_template_part( 'clntent', 'desarrollo');
+	if (in_category( 'desarrollo', null ) ){
+		get_template_part( 'content', 'desarrollo');
 	} else {
 		get_template_part( 'content', get_post_format() );
 	}

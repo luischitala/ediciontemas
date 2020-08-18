@@ -32,6 +32,13 @@ require 'inc/storefront-functions.php';
 require 'inc/storefront-template-hooks.php';
 require 'inc/storefront-template-functions.php';
 require 'inc/wordpress-shims.php';
+// Funciones propias JS
+function alert_js(){
+	// Aquí indicamos que función
+	wp_enqueue_script( 'alert_js', get_template_directory_uri().'/js/alert.js' , array('jquery'), false, false );
+}
+// Así llamanos las funciones
+add_action( 'wp_enqueue_scripts', 'alert_js');
 
 if ( class_exists( 'Jetpack' ) ) {
 	$storefront->jetpack = require 'inc/jetpack/class-storefront-jetpack.php';
