@@ -1,5 +1,5 @@
 <?php
-
+// Nuevo rol
 function add_role_desarrollador()
 {
     remove_role('desarrollador');
@@ -11,7 +11,9 @@ function add_role_desarrollador()
             'read' => true,
             'edit_posts' => true,
             'upload_files' => true,
-
+            'publish_posts' => true,
+            'delete_posts' => true,
+            'edit_published_posts' => true,
         ]
         );
 };
